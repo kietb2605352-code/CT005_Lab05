@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infographic và video YouTube</title>
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5e6b76;
+      --paper: #fffdf8;
+      --line: #e8e1d6;
+      --accent: #e85d3f;
+      --accent-dark: #b83d27;
+      --teal: #247f7a;
+      --shadow: 0 18px 50px rgba(47, 37, 24, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(232, 93, 63, 0.15), transparent 28rem),
+        radial-gradient(circle at 92% 18%, rgba(36, 127, 122, 0.12), transparent 26rem),
+        var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 64px 0 72px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--accent-dark);
+      font: 700 0.78rem/1.2 Arial, sans-serif;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.6rem, 7vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      max-width: 620px;
+      margin: 22px 0 42px;
+      color: var(--muted);
+      font: 1.08rem/1.65 Arial, sans-serif;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 1.55rem;
+    }
+
+    .label {
+      color: var(--teal);
+      font: 700 0.72rem/1.2 Arial, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .image-wrap {
+      padding: 18px;
+      background: #f5f0e8;
+    }
+
+    .image-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .video-body { padding: 18px; }
+
+    .video-frame {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      border-radius: 4px;
+      background: #101719;
+    }
+
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-note {
+      margin: 18px 0 20px;
+      color: var(--muted);
+      font: 0.95rem/1.55 Arial, sans-serif;
+    }
+
+    .watch-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      color: #fff;
+      background: var(--accent);
+      border-radius: 3px;
+      font: 700 0.9rem/1 Arial, sans-serif;
+      text-decoration: none;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .watch-link:hover,
+    .watch-link:focus-visible {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .watch-link:focus-visible { outline: 3px solid rgba(36, 127, 122, 0.35); outline-offset: 3px; }
+
+    footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font: 0.8rem/1.5 Arial, sans-serif;
+    }
+
+    @media (max-width: 760px) {
+      .page { padding-top: 40px; }
+      .content { grid-template-columns: 1fr; }
+      .panel-header { padding: 18px; }
+      .image-wrap, .video-body { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <p class="eyebrow">Visual story · Video companion</p>
+    <h1>Infographic<br>và video YouTube</h1>
+    <p class="intro">
+      Khám phá nội dung trực quan bên dưới, sau đó xem video để tìm hiểu sâu hơn.
+      Video có thể phát ngay trên trang hoặc mở trong YouTube bằng liên kết bên dưới.
+    </p>
+
+    <section class="content" aria-label="Nội dung trực quan và video">
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Infographic</h2>
+          <span class="label">Hình ảnh</span>
+        </div>
+        <div class="image-wrap">
+          <img src="infographic.png" alt="Infographic minh họa nội dung chính">
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>Video</h2>
+          <span class="label">YouTube</span>
+        </div>
+        <div class="video-body">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube.com/embed/wQR3gHHrv5U?rel=0&playsinline=1"
+              title="Video YouTube"
+              loading="eager"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p class="video-note">Nhấn nút phát trong khung video. Nếu trình duyệt chặn iframe, hãy mở video trực tiếp trên YouTube.</p>
+          <a class="watch-link" href="https://youtu.be/wQR3gHHrv5U?si=j4bDeUHZL1FlJBPK" target="_blank" rel="noopener noreferrer">
+            Xem video trên YouTube <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <footer>Trang trình bày nội dung bằng HTML, CSS và trình phát YouTube nhúng.</footer>
+  </main>
+</body>
+</html>
