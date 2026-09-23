@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Infographic và video YouTube</title>
+  <title>Sản phẩm Lab05</title>
   <style>
     :root {
       --ink: #17212b;
@@ -59,7 +59,7 @@
 
     .content {
       display: grid;
-      grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 24px;
       align-items: start;
     }
@@ -95,6 +95,16 @@
 
     .image-wrap {
       padding: 18px;
+      background: #f5f0e8;
+    }
+
+    .pdf-body { padding: 18px; }
+
+    .pdf-frame {
+      width: 100%;
+      height: 420px;
+      border: 0;
+      border-radius: 4px;
       background: #f5f0e8;
     }
 
@@ -141,6 +151,8 @@
       transition: background 160ms ease, transform 160ms ease;
     }
 
+    .pdf-link { margin-top: 18px; }
+
     .watch-link:hover,
     .watch-link:focus-visible {
       background: var(--accent-dark);
@@ -159,27 +171,46 @@
       .page { padding-top: 40px; }
       .content { grid-template-columns: 1fr; }
       .panel-header { padding: 18px; }
-      .image-wrap, .video-body { padding: 12px; }
+      .image-wrap, .pdf-body, .video-body { padding: 12px; }
+      .pdf-frame { height: 480px; }
     }
   </style>
 </head>
 <body>
   <main class="page">
-    <p class="eyebrow">Visual story · Video companion</p>
-    <h1>Infographic<br>và video YouTube</h1>
+    <p class="eyebrow">Lab05 · Ba sản phẩm</p>
+    <h1>Ba sản phẩm<br>của Lab05</h1>
     <p class="intro">
-      Khám phá nội dung trực quan bên dưới, sau đó xem video để tìm hiểu sâu hơn.
-      Video có thể phát ngay trên trang hoặc mở trong YouTube bằng liên kết bên dưới.
+      Xem tài liệu PDF, khám phá infographic PNG và phát video YouTube trực tiếp
+      trên cùng một trang.
     </p>
 
-    <section class="content" aria-label="Nội dung trực quan và video">
+    <section class="content" aria-label="Ba sản phẩm của Lab05">
       <article class="panel">
         <div class="panel-header">
-          <h2>Infographic</h2>
+          <h2>PDF</h2>
+          <span class="label">Tài liệu</span>
+        </div>
+        <div class="pdf-body">
+          <iframe
+            class="pdf-frame"
+            src="Lab05_Ex1.1.pdf"
+            title="Tài liệu PDF Lab05"
+            loading="lazy">
+          </iframe>
+          <a class="watch-link pdf-link" href="Lab05_Ex1.1.pdf" target="_blank" rel="noopener noreferrer">
+            Mở PDF trong trình duyệt <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-header">
+          <h2>PNG</h2>
           <span class="label">Hình ảnh</span>
         </div>
         <div class="image-wrap">
-          <img src="infographic.png" alt="Infographic minh họa nội dung chính">
+          <img src="Lab05_Ex2.1.png.png" alt="Infographic của Lab05">
         </div>
       </article>
 
@@ -207,7 +238,7 @@
       </article>
     </section>
 
-    <footer>Trang trình bày nội dung bằng HTML, CSS và trình phát YouTube nhúng.</footer>
+    <footer>Trang trình bày ba sản phẩm bằng HTML, CSS và các tài nguyên liên kết tương đối.</footer>
   </main>
 </body>
 </html>
