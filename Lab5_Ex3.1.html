@@ -42,6 +42,24 @@
       text-transform: uppercase;
     }
 
+    .profile {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      margin: 0 0 18px;
+      border: 1px solid rgba(36, 127, 122, 0.2);
+      border-radius: 999px;
+      background: rgba(36, 127, 122, 0.06);
+      color: var(--ink);
+      font: 700 0.9rem/1.4 Arial, sans-serif;
+      box-shadow: 0 12px 20px rgba(36, 127, 122, 0.05);
+    }
+
+    .profile strong {
+      color: var(--accent-dark);
+    }
+
     h1 {
       max-width: 720px;
       margin: 0;
@@ -179,6 +197,13 @@
 <body>
   <main class="page">
     <p class="eyebrow">Lab05 · Ba sản phẩm</p>
+    <div class="profile" aria-label="Thông tin cá nhân">
+      <span>Tên: <strong>Châu Gia Kiệt</strong></span>
+      <span>|</span>
+      <span>Mã SV: <strong>B2605352</strong></span>
+      <span>|</span>
+      <span>Mã học phần: <strong>CT005</strong></span>
+    </div>
     <h1>Ba sản phẩm<br>của Lab05</h1>
     <p class="intro">
       Xem tài liệu PDF, khám phá infographic PNG và phát video YouTube trực tiếp
