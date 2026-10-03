@@ -1,1 +1,1 @@
-#### CT005 – Lab05 – Châu Gia Kiệt – B2605352 – CT005
+#### CT005 – Lab05 – Châu Gia Kiệt – B2605352 – Nền tảng công nghệ số(CT005/D04)
